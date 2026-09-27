@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050509" />
+  <meta name="description" content="SoulTale" />
+  <title>SoulTale</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="stars stars-a"></div>
+    <div class="stars stars-b"></div>
+    <div class="stars stars-c"></div>
+    <div class="nebula nebula-a"></div>
+    <div class="nebula nebula-b"></div>
+    <div class="orbit orbit-a"></div>
+    <div class="orbit orbit-b"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" data-tab="home" aria-label="SoulTale home">
+      <span class="brand-heart" aria-hidden="true">♥</span>
+      <span>SoulTale</span>
+    </a>
+    <nav class="tabs" aria-label="Primary navigation">
+      <button class="tab is-active" data-tab="home">Home</button>
+      <button class="tab" data-tab="game">Play</button>
+      <button class="tab" data-tab="about">About</button>
+      <button class="tab" data-tab="credits">Credits</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="soundToggle" aria-label="Toggle sound effects" title="Toggle UI sounds">♫</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel view is-visible" id="home" data-view="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> SOULTALE</p>
+          <h1><span class="play-white">A SOUL-<br />POWERED</span><br /><span class="accent">UNDERTALE<br />FAN GAME.</span></h1>
+          <p class="lead">A dedicated home for the Scratch-built experience. Jump straight into the game, learn about souls, or explore the project notes.</p>
+          <div class="cta-row">
+            <button class="primary-btn" data-tab="game"><span>▶</span> Play now</button>
+            <a class="secondary-btn" href="https://scratch.mit.edu/projects/666404749" target="_blank" rel="noopener">Open on scratch <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="scanline"></div>
+          <div class="hero-card-top"><span>SOULTALE.EXE</span><span>v1.0</span></div>
+          <div class="soul-stage">
+            <div class="ring ring-outer"></div>
+            <div class="ring ring-mid"></div>
+            <div class="soul-heart">♥</div>
+          </div>
+          <div class="hero-card-bottom">
+            <span>DETERMINATION</span>
+            <span class="tiny-stars">✦ ✧ ✦</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <article class="feature-card">
+          <div class="feature-icon">01</div>
+          <div><h3>Play in-browser</h3><p>The Scratch project is embedded directly into the site.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">02</div>
+          <div><h3>Designed for desktop + mobile</h3><p>Responsive, touch-friendly layouts with fullscreen gaming.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">03</div>
+          <div><h3>Know your soul</h3><p>Read the original game's soul descriptions and controls.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel view" id="game" data-view="game">
+      <div class="section-heading">
+        <div><p class="eyebrow">PLAY AREA</p><h2><span class="play-white">PLAY</span> <span class="accent">SOULTALE</span><span class="play-white">.</span></h2></div>
+        <div class="section-tools">
+          <span class="live-pill"><span class="status-dot"></span> SOULTALE</span>
+          <button class="secondary-btn small" id="fullscreenBtn" type="button">⛶ Fullscreen</button>
+        </div>
+      </div>
+
+      <div class="game-shell" id="gameShell">
+        <div class="game-toolbar">
+          <span><strong>SOULTALE</strong> · PLAY</span>
+        </div>
+        <button class="fullscreen-back-btn" id="fullscreenBackBtn" type="button" aria-label="Exit fullscreen and return to the Play tab">Exit Fullscreen</button>
+        <div class="game-frame-wrap" id="gameFrameWrap">
+          <div class="loader" id="gameLoader"><div class="loader-heart" aria-hidden="true" style="visibility:hidden">♥</div><span>Loading SoulTale…</span></div>
+          <iframe
+            id="scratchFrame"
+            src="SoulTale.html"
+            title="SoulTale game"
+            allow="autoplay; fullscreen"
+            allowtransparency="true"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel view" id="about" data-view="about">
+      <div class="section-heading"><div><p class="eyebrow">ABOUT</p><h2>What is <span class="accent">SoulTale</span>?</h2></div></div>
+      <div class="two-col">
+        <article class="story-card">
+          <p>SoulTale is a fan-made game inspired by the popular role-playing game Undertale. Players can choose from different human SOULs from the original game, with each one offering a unique way to play. These choices give players different abilities and playstyles while exploring a new  experience inspired by Undertale.</p>
+        </article>
+        <aside class="info-card">
+          <div class="info-line"><span>Original engine</span><strong>Scratch</strong></div>
+          <div class="info-line"><span>Genre</span><strong>Fan-made game</strong></div>
+          <div class="info-line"><span>Playable styles</span><strong>5 core SOULs</strong></div>
+          <div class="info-line"><span>Game mode</span><strong>Browser / Touch</strong></div>
+        </aside>
+      </div>
+
+      <div class="section-heading" style="margin-top:28px"><div><p class="eyebrow">THE SOULS</p><h2>Five ways to <span class="accent">play</span>.</h2></div></div>
+      <div class="soul-grid">
+        <button class="soul-card red-card" data-soul="red"><span class="soul-big">♥</span><strong>Red Soul</strong><small>Determination</small><em>Free movement</em></button>
+        <button class="soul-card blue-card" data-soul="blue"><span class="soul-big">♥</span><strong>Blue Soul</strong><small>Integrity</small><em>Platform physics</em></button>
+        <button class="soul-card green-card" data-soul="green"><span class="soul-big">♥</span><strong>Green Soul</strong><small>Kindness</small><em>Shield defense</em></button>
+        <button class="soul-card purple-card" data-soul="purple"><span class="soul-big">♥</span><strong>Purple Soul</strong><small>Perseverance</small><em>Line movement</em></button>
+        <button class="soul-card yellow-card" data-soul="yellow"><span class="soul-big">♥</span><strong>Yellow Soul</strong><small>Justice</small><em>Shooting mechanic</em></button>
+      </div>
+      <div class="secret-card soul-note-card"><div class="secret-lock">✦</div><div><p>There are two more souls, which are <button class="soul-text-link cyan-glow" data-soul="cyan" type="button">Cyan Soul (Patience)</button> and <button class="soul-text-link orange-glow" data-soul="orange" type="button">Orange Soul (Bravery)</button>. However, they don’t have any gameplay; instead, they are represented as attack mechanics.</p></div></div>
+      <div class="secret-card"><div class="secret-lock">✦</div><div><p class="eyebrow">HIDDEN CONTENT</p><h3>? ? ?</h3><p>Complete all five core souls to reveal a secret soul</p></div></div>
+      <p class="note">On phones and tablets, the game recommends enabling Mobile Mode in its settings for touch controls.</p>
+    </section>
+
+    <section class="panel view" id="credits" data-view="credits">
+      <div class="section-heading"><div><p class="eyebrow">CREDITS</p><h2>Credits <span class="accent">&amp; Special Thanks</span>.</h2></div></div>
+      <div class="credits-table" role="table" aria-label="SoulTale credits">
+        <div class="credit-row header" role="row"><span>Credit</span><span>Creator</span></div>
+        <div class="credit-row"><span>SoulTale</span><strong>CG33</strong></div>
+        <div class="credit-row"><span>Undertale</span><strong>Toby Fox</strong></div>
+          <div class="credit-row"><span>Red &amp; Blue soul music</span><strong>RetroSpecter</strong></div>
+        <div class="credit-row"><span>Green / Purple / Yellow soul music</span><strong>GameChops</strong></div>
+        <div class="credit-row"><span>Secret soul music</span><strong>Swip x</strong></div>
+        <div class="credit-row"><span>Winning sound effects</span><strong>Lsplash</strong></div>
+        <div class="credit-row"><span>Game thumbnail</span><strong>Avocato</strong></div>
+      </div>
+    </section>
+
+    <section class="panel view" id="contact" data-view="contact">
+      <div class="section-heading"><div><p class="eyebrow">CONTACT</p><h2 class="contact-heading">Find the <span class="accent">original creator</span>.</h2></div></div>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://discord.com/" target="_blank" rel="noopener"><span class="contact-icon">◉</span><div><small>Discord user</small><strong>CG33x</strong></div><span>↗</span></a>
+        <a class="contact-card" href="https://scratch.mit.edu/users/Dream_115/" target="_blank" rel="noopener"><span class="contact-icon">◆</span><div><small>Scratch user</small><strong>Dream_115</strong></div><span>↗</span></a>
+      </div>
+      <div class="source-box">
+        <p class="eyebrow">SOURCE LINKS</p>
+        <a class="contact-card source-link-card" href="https://scratch.mit.edu/projects/666404749" target="_blank" rel="noopener"><span class="contact-icon">◆</span><div><small>Hosted game</small><strong>Open on Scratch</strong></div><span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>SOULTALE</span><span>Fan-made project · Not affiliated with Undertale or Toby Fox</span><span>♥</span></footer>
+
+  <dialog class="soul-dialog" id="soulDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+    <div id="dialogBody"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
